@@ -12,22 +12,22 @@ class AppHeader extends React.Component {
         <nav className={styles.AppHeader}>
           {/* buttons */}
           <div className={styles.buttons}>
-            <div className={styles.buttonActive}>
+            <a className={styles.buttonActive} href="#">
               <BurgerIcon type="primary" />
               <div className={styles.label}>Конструктор</div>
-            </div>
-            <div className={styles.button}>
+            </a>
+            <a className={styles.button} href="#">
               <ListIcon type="secondary" />
               <div className={styles.label}>Конструктор</div>
-            </div>
+            </a>
           </div>
           <div className={styles.logo}>
             <Logo />
           </div>
-          <div className={styles.profileGrpoup}>
+          <a className={styles.profileGrpoup} href="#">
             <ProfileIcon type="secondary" />
             <div className={styles.label}>Конструктор</div>
-          </div>
+          </a>
         </nav>
       </>
     );

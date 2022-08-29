@@ -45,6 +45,7 @@ export const ModalOverlay = ({
     <div
       className={oppened ? styles.overlayOppened : styles.overlayClosed}
       ref={newRef}
+      onClick={closeFunc}
     >
       <Modal
         data={data}

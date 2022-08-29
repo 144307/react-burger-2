@@ -25,6 +25,7 @@
   /* outline: 1px solid red; */
   color: #8585ad;
   padding: 16px 20px 16px 20px;
+  text-decoration: none;
 }
 
 .label {
@@ -38,6 +39,7 @@
   flex-direction: row;
   /* outline: 1px solid red; */
   color: #f2f2f3;
+  text-decoration: none;
 }
 
 .logo {
@@ -57,4 +59,5 @@
   flex: 1;
   justify-content: flex-end;
   /* outline: 1px solid red; */
+  text-decoration: none;
 }

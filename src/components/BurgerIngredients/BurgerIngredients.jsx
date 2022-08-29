@@ -4,15 +4,7 @@ import styles from "./BurgerIngredients.module.css";
 
 import { Tab } from "@ya.praktikum/react-developer-burger-ui-components";
 
-import { DATA } from "../../data";
-
-// import { useCallback } from "react";
-// import { useRef } from "react";
-// import { useState } from "react";
-// import { useDrop } from "react-dnd";
-
 import { ListItem } from "../ListItem/ListItem";
-// import { prettyDOM } from "@testing-library/react";
 
 export const BurgerIngredients = ({ data, openIngredientDetails }) => {
   const [current, setCurrent] = React.useState("one");

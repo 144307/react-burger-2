@@ -7,7 +7,7 @@ import styles from "./BurgerConstructor.module.css";
 import { ConstructorElement } from "@ya.praktikum/react-developer-burger-ui-components";
 import { CurrencyIcon } from "@ya.praktikum/react-developer-burger-ui-components";
 import { Button } from "@ya.praktikum/react-developer-burger-ui-components";
-import { DATA } from "../../data";
+import { DATA } from "../../utils/data";
 import { ListItem } from "../ListItem/ListItem";
 
 export const BurgerConstructor = ({
