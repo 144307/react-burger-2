@@ -62,7 +62,7 @@ export const ListItem = ({
   // const opacity = isDragging ? 0 : 1;
 
   const listHandleClose = (e) => {
-    console.log("e", e);
+    // console.log("e", e);
     e.stopPropagation();
     handleClose(_id);
   };

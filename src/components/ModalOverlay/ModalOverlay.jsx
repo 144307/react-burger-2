@@ -27,14 +27,14 @@ export const ModalOverlay = ({
   }, [modalOppened]);
 
   const openFunc = () => {
-    console.log("open");
+    // console.log("open");
     // oppened = true;
     setOppened({ oppened: true });
     newRef.current.style.display = "flex";
   };
 
   const closeFunc = () => {
-    console.log("close");
+    // console.log("close");
     // oppened = false;
     setOppened({ oppened: false });
     newRef.current.style.display = "none";

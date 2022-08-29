@@ -17,7 +17,7 @@ export const BurgerConstructor = ({
 }) => {
   const [price, setPrice] = useState();
   useEffect(() => {
-    console.log("useEffect");
+    // console.log("useEffect");
     updatePrice();
   });
 
@@ -26,8 +26,8 @@ export const BurgerConstructor = ({
     accept: "item",
     // drop: (item, monitor) => {
     drop: (item) => {
-      console.log("item", item.name);
-      console.log("price", item.price);
+      // console.log("item", item.name);
+      // console.log("price", item.price);
       if (basket.length === 0 && item.type === "bun") {
         setBasket((basket) =>
           !basket.includes(item) ? [...basket, item] : basket

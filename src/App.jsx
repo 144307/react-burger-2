@@ -17,6 +17,8 @@ import Api from "./utils/Api/Api";
 
 import "./fonts/fonts.css";
 
+import { Tab } from "@ya.praktikum/react-developer-burger-ui-components";
+
 const apiUrl = "https://norma.nomoreparties.space/api/ingredients";
 
 const myApi = new Api(apiUrl);
@@ -47,12 +49,12 @@ export const App = () => {
     fetch(apiUrl)
       .then((response) => response.json())
       .then((response) => {
-        console.log("response", response);
+        // console.log("response", response);
         // this.state = {date: new Date()};
         setData(response.data);
         setIngredientsList(response.data);
         setConstructorList(response.data);
-        console.log("data", data);
+        // console.log("data", data);
       })
       .catch((error) => {
         console.log(error);
@@ -62,11 +64,11 @@ export const App = () => {
   // const openIngredientDetails = (id: string, returnedData: Props[]) => {
   const openIngredientDetails = (id, returnedData) => {
     setModalOppened(!modalOppened);
-    console.log(
-      "openIngredientDetails check id",
-      ingredientsList.filter((e) => e._id === id)[0]
-    );
-    console.log("returnedData", returnedData);
+    // console.log(
+    //   "openIngredientDetails check id",
+    //   ingredientsList.filter((e) => e._id === id)[0]
+    // );
+    // console.log("returnedData", returnedData);
     setData(ingredientsList.filter((e) => e._id === id)[0]);
     setCurrentModalOverlay(true);
   };
@@ -74,10 +76,10 @@ export const App = () => {
   // const openOrderDetails = (basket: Props) => {
   const openOrderDetails = (basket) => {
     setModalOppened(!modalOppened);
-    console.log("openOrderDetails", basket);
+    // console.log("openOrderDetails", basket);
     setCurrentModalOverlay(false);
   };
-
+  const [current, setCurrent] = React.useState("one");
   return (
     <div className="App">
       <AppHeader />

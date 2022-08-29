@@ -9,6 +9,20 @@ import { ListItem } from "../ListItem/ListItem";
 export const BurgerIngredients = ({ data, openIngredientDetails }) => {
   const [current, setCurrent] = React.useState("one");
 
+  const tabs = (
+    <div style={{ display: "flex" }}>
+      <Tab value="one" active={current === "one"} onClick={setCurrent}>
+        One
+      </Tab>
+      <Tab value="two" active={current === "two"} onClick={setCurrent}>
+        Two
+      </Tab>
+      <Tab value="three" active={current === "three"} onClick={setCurrent}>
+        Three
+      </Tab>
+    </div>
+  );
+
   return (
     <div className={styles.mainBox}>
       <div className={styles.tilte}>
@@ -25,6 +39,7 @@ export const BurgerIngredients = ({ data, openIngredientDetails }) => {
           <Tab value="three" active={current === "three"} onClick={setCurrent}>
             Three
           </Tab> */}
+          {tabs}
         </div>
       </div>
       <div className={styles.box}>
