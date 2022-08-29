@@ -23,6 +23,9 @@ export const BurgerIngredients = ({ data, openIngredientDetails }) => {
     </div>
   );
 
+  // function scrollTo(hash) {
+  //   location.hash = "#" + hash;
+  // }
   return (
     <div className={styles.mainBox}>
       <div className={styles.tilte}>
@@ -39,7 +42,7 @@ export const BurgerIngredients = ({ data, openIngredientDetails }) => {
           <Tab value="three" active={current === "three"} onClick={setCurrent}>
             Three
           </Tab> */}
-          {tabs}
+          {/* {tabs} */}
         </div>
       </div>
       <div className={styles.box}>
