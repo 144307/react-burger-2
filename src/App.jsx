@@ -43,8 +43,6 @@ export const App = () => {
   const [modalOppened, setModalOppened] = React.useState(false);
   const [CurrentModalOverlay, setCurrentModalOverlay] = React.useState(false); // true - ingredients, false - order
 
-  const ingredientRef = useRef(null);
-
   useEffect(() => {
     fetch(apiUrl)
       .then((response) => response.json())
@@ -98,7 +96,6 @@ export const App = () => {
         <ModalOverlay
           // object={"test"}
           data={data}
-          ingredientRef={ingredientRef}
           modalOppened={modalOppened}
           CurrentModalOverlay={CurrentModalOverlay}
         ></ModalOverlay>

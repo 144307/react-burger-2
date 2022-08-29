@@ -9,7 +9,6 @@ import { Modal } from "../Modal/modal";
 export const ModalOverlay = ({
   // object,
   data,
-  ingredientRef,
   modalOppened,
   CurrentModalOverlay,
 }) => {
@@ -46,6 +45,7 @@ export const ModalOverlay = ({
       className={oppened ? styles.overlayOppened : styles.overlayClosed}
       ref={newRef}
       onClick={closeFunc}
+      id={"modal"}
     >
       <Modal
         data={data}

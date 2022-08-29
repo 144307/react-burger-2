@@ -61,7 +61,6 @@ export const Modal = ({ data, closeFunc, CurrentModalOverlay }) => {
   return createProtal(
     <div
       className={styles.box}
-      if={"modal"}
       onClick={(e) => {
         e.stopPropagation();
       }}
