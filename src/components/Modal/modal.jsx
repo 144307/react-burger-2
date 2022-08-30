@@ -6,7 +6,6 @@ import done from "../../images/done.svg";
 import close from "../../images/close.svg";
 
 import ReactDOM from "react-dom";
-import PortalReactDOM from "react-dom";
 
 export const Modal = ({ data, closeFunc, CurrentModalOverlay }) => {
   useEffect(() => {
@@ -58,28 +57,7 @@ export const Modal = ({ data, closeFunc, CurrentModalOverlay }) => {
     </>
   );
 
-  // return PortalReactDOM.createProtal(
-  //   <div
-  //     className={styles.box}
-  //     onClick={(e) => {
-  //       e.stopPropagation();
-  //     }}
-  //   >
-  //     <div className={styles.titleGroup}>
-  //       <div className={styles.title}>Детали ингредиента</div>
-  //       <div
-  //         className={styles.closeButton}
-  //         style={{ backgroundImage: `url(${close})` }}
-  //         onClick={closeFunc}
-  //       ></div>
-  //     </div>
-  //     {CurrentModalOverlay ? ingrediets : orderDetails}
-  //     {/* true - ingredients, false - order */}
-  //   </div>,
-  //   document.getElementById("#modal")
-  // );
-
-  return (
+  return ReactDOM.createProtal(
     <div
       className={styles.box}
       onClick={(e) => {
@@ -96,6 +74,27 @@ export const Modal = ({ data, closeFunc, CurrentModalOverlay }) => {
       </div>
       {CurrentModalOverlay ? ingrediets : orderDetails}
       {/* true - ingredients, false - order */}
-    </div>
+    </div>,
+    document.getElementById("#modal")
   );
+
+  // return (
+  //   <div
+  //     className={styles.box}
+  //     onClick={(e) => {
+  //       e.stopPropagation();
+  //     }}
+  //   >
+  //     <div className={styles.titleGroup}>
+  //       <div className={styles.title}>Детали ингредиента</div>
+  //       <div
+  //         className={styles.closeButton}
+  //         style={{ backgroundImage: `url(${close})` }}
+  //         onClick={closeFunc}
+  //       ></div>
+  //     </div>
+  //     {CurrentModalOverlay ? ingrediets : orderDetails}
+  //     {/* true - ingredients, false - order */}
+  //   </div>
+  // );
 };

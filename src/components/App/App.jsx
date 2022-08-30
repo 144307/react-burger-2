@@ -1,23 +1,20 @@
 import React from "react";
-import "./App.css";
-import styles from "./components/App/App.module.css";
-import AppHeader from "./components/AppHeader/AppHeader";
-import { BurgerConstructor } from "./components/BurgerConstructor/BurgerConstructor";
+import styles from "./App.module.css";
+import AppHeader from "../AppHeader/AppHeader";
+import { BurgerConstructor } from "../BurgerConstructor/BurgerConstructor";
 // import BurgerConstructor from "./components/BurgerConstructor/BurgerConstructor";
-import { BurgerIngredients } from "./components/BurgerIngredients/BurgerIngredients";
+import { BurgerIngredients } from "../BurgerIngredients/BurgerIngredients";
 // import { ModalOverlay } from "./components/ModalOverlay/ModalOverlay";
-import { ModalOverlay } from "./components/ModalOverlay/ModalOverlay";
+import { ModalOverlay } from "../ModalOverlay/ModalOverlay";
 
 import { useEffect, useRef } from "react";
 
 import { DndProvider } from "react-dnd";
 import { HTML5Backend } from "react-dnd-html5-backend";
 
-import Api from "./utils/Api/Api";
+import Api from "../../utils/Api/Api";
 
-import "./fonts/fonts.css";
-
-import { Tab } from "@ya.praktikum/react-developer-burger-ui-components";
+import "../../fonts/fonts.css";
 
 const apiUrl = "https://norma.nomoreparties.space/api/ingredients";
 
