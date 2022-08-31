@@ -14,6 +14,8 @@
 
 .listItem {
   /* outline: 1px solid rgb(140, 0, 255); */
+  display: flex;
+  align-items: center;
 }
 
 .gridItem {
@@ -67,4 +69,16 @@
 .title {
   text-align: center;
   /* outline: 1px solid yellow; */
+}
+
+.icon {
+  width: 24px;
+  height: 24px;
+  margin-right: 8px;
+  background: url("../../images/draggable.svg");
+  opacity: 0;
+}
+
+.listItem:hover .icon {
+  opacity: 1;
 }
