@@ -1,59 +1,55 @@
 import React from "react";
 import { useEffect } from "react";
-import { forwardRef } from "react";
 
 import styles from "./ModalOverlay.module.css";
 
+import done from "../../images/done.svg";
+
 import { Modal } from "../Modal/modal";
 
+import { Ingrediets } from "../Ingrediets/Ingrediets";
+import { OrderDetails } from "../OrderDetails/OrderDetails";
+
+import ReactDOM from "react-dom";
+
 export const ModalOverlay = ({
-  // object,
   data,
   modalOppened,
   CurrentModalOverlay,
+  closeModal,
 }) => {
-  const [oppened, setOppened] = React.useState(true);
   const newRef = React.createRef();
-  // let oppened = false;
-
-  // const componentDidMount =() => {
-  // ingredientRef.current = testOutput;
-  //   this.openFunc();
-  // }
 
   useEffect(() => {
-    // change the localStorage
     openFunc();
   }, [modalOppened]);
 
   const openFunc = () => {
-    // console.log("open");
-    // oppened = true;
-    setOppened({ oppened: true });
     newRef.current.style.display = "flex";
   };
 
   const closeFunc = () => {
-    // console.log("close");
-    // oppened = false;
-    setOppened({ oppened: false });
+    closeModal();
     newRef.current.style.display = "none";
   };
 
-  return (
-    <div
-      className={oppened ? styles.overlayOppened : styles.overlayClosed}
-      ref={newRef}
-      onClick={closeFunc}
-      id={"modal"}
-    >
+  return ReactDOM.createPortal(
+    <div className={styles.overlayOppened} ref={newRef} onClick={closeFunc}>
       <Modal
-        data={data}
+        // data={data}
         closeFunc={closeFunc}
-        CurrentModalOverlay={CurrentModalOverlay}
+
+        // CurrentModalOverlay={CurrentModalOverlay}
         // onClick={console.log("ModalOverlay data", data)}
-      />
-    </div>
+      >
+        {CurrentModalOverlay ? (
+          <Ingrediets data={data} />
+        ) : (
+          <OrderDetails image={done} />
+        )}
+      </Modal>
+    </div>,
+    document.getElementById("modal")
   );
 };
 

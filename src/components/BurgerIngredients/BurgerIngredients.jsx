@@ -32,7 +32,7 @@ export const BurgerIngredients = ({ data, openIngredientDetails }) => {
         <div className="p-4">
           <p className="text text_type_main-large">Соберите бургер</p>
         </div>
-        <div style={{ display: "flex" }}>{tabs}</div>
+        {/* <div style={{ display: "flex" }}>{tabs}</div> */}
       </div>
       <div className={styles.box}>
         <div className="m-2">
