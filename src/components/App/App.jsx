@@ -80,7 +80,7 @@ export const App = () => {
     setModalOppened(false);
   };
 
-  const [current, setCurrent] = React.useState("one");
+  // const [current, setCurrent] = React.useState("one");
   return (
     <>
       <div className="App">
